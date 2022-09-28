@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "230ca7a4-ee74-44f8-a427-38865eb854d4": {
+      "ProjectGuid": "230ca7a4-ee74-44f8-a427-38865eb854d4",
+      "DisplayName": "AnstigramAPI",
+      "ColorIndex": 0
+    },
+    "28c1ddff-065e-4a4a-b8dd-fa2cf858d022": {
+      "ProjectGuid": "28c1ddff-065e-4a4a-b8dd-fa2cf858d022",
+      "DisplayName": "AnstigramAPI.DAL",
+      "ColorIndex": 1
+    },
+    "7936af29-b5a1-4435-a5f8-29322e39dbb8": {
+      "ProjectGuid": "7936af29-b5a1-4435-a5f8-29322e39dbb8",
+      "DisplayName": "AnstigramAPI.Logic",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
