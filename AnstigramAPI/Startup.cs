@@ -31,6 +31,7 @@ namespace AnstigramAPI
         {
             services.AddScoped<IUserDAL, UserDAL>();
             services.AddScoped<IPostDAL, PostDAL>();
+            services.AddScoped<ICommentDAL, CommentDAL>();
             //Allow request from different domains.
             services.AddCors(c => {
                 c.AddDefaultPolicy(builder => builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader());

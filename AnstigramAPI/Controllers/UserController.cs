@@ -38,5 +38,13 @@ namespace AnstigramAPI.Controllers
 
             return new JsonResult(users);
         }
+
+        [HttpPost]
+        public bool Post(FollowerLogic followerLogic)
+        {
+            _userContainer.FollowUser(followerLogic.FollowerId, followerLogic.FollowingId);
+
+            return true;
+        }
     }
 }

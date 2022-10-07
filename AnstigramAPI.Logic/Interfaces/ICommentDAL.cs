@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace AnstigramAPI.Logic.Interfaces
 {
-    public interface IUserDAL
+    public interface ICommentDAL
     {
-        public User GetUser(int id);
-        public List<User> GetUsers();
-        public void FollowUser(int followerId, int followingId);
+        public Comment GetComment(int id);
+        public List<Comment> GetComments();
     }
 }

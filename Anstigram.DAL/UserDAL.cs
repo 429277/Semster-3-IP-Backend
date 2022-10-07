@@ -56,5 +56,21 @@ namespace AnstigramAPI.DAL
                 return users;
             }
         }
+
+        public void FollowUser(int followerId, int followingId)
+        {
+            List<User> users = new List<User>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand Query = new SqlCommand($"INSERT INTO FollowerLogic VALUES (@followingId, @followerId)", connection))
+                {
+                    Query.Parameters.AddWithValue("@followerId", followerId);
+                    Query.Parameters.AddWithValue("@followingId", followingId);
+                    connection.Open();
+                    var reader = Query.ExecuteReader();    
+                    connection.Close();
+                }
+            }
+        }
     }
 }

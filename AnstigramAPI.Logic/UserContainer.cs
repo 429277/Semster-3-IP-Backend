@@ -21,5 +21,10 @@ namespace AnstigramAPI.Logic
         {
             return _userDAL.GetUsers();
         }
+
+        public void FollowUser(int followerId, int followingId)
+        {
+            _userDAL.FollowUser(followerId, followingId);
+        }
     }
 }
