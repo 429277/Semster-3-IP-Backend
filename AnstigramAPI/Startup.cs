@@ -14,6 +14,10 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
 using AnstigramAPI.Logic.Interfaces;
 using AnstigramAPI.DAL;
+using AnstigramAPI.Interfaces;
+using AnstigramAPI.Repositories;
+using AnstigramAPI.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace AnstigramAPI
 {
@@ -29,6 +33,18 @@ namespace AnstigramAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //accestoken 
+
+
+            //Dbcontext
+            string sqlServer = @"Data Source=LAPTOP-TLNR6N6N\SQLEXPRESS; Initial Catalog=Anstigram; Integrated Security=True; Connection Timeout=5;";
+            services.AddDbContext<AccountContext>(options => options.UseSqlServer(sqlServer));
+
+            //Repository pattern dependicy injection
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IPostRepository, PostRepository>();
+
+            //Old layers dependicy injection
             services.AddScoped<IUserDAL, UserDAL>();
             services.AddScoped<IPostDAL, PostDAL>();
             services.AddScoped<ICommentDAL, CommentDAL>();

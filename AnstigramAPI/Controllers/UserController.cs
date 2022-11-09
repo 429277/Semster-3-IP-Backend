@@ -6,6 +6,12 @@ using AnstigramAPI.Logic;
 using AnstigramAPI.Logic.Interfaces;
 using AnstigramAPI.Logic.Models;
 using System.Collections.Generic;
+using AnstigramAPI.Interfaces;
+using AnstigramAPI.Models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using System;
 
 namespace AnstigramAPI.Controllers
 {
@@ -15,13 +21,15 @@ namespace AnstigramAPI.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly UserContainer _userContainer;
+        private readonly IAccountRepository _accountRepository;
 
-        public UserController(IConfiguration configuration, IUserDAL userDAL)
+        public UserController(IConfiguration configuration, IUserDAL userDAL, IAccountRepository accountRepository)
         {
             _configuration = configuration;
             _userContainer = new UserContainer(userDAL);
+            _accountRepository = accountRepository;
+            
         }
-
         
         [HttpGet("{id}")]
         public JsonResult Get(int id)
@@ -32,13 +40,26 @@ namespace AnstigramAPI.Controllers
         }
 
         [HttpGet]
-        public JsonResult Get()
+        [Route("GetFollowers")]
+        public IActionResult Get([FromHeader] string Authorization)
         {
-            List<User> users = _userContainer.GetUsers();
-
-            return new JsonResult(users);
+            var token = Authorization;
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(token);
+            List<Claim> claims = jwtSecurityToken.Claims as List<Claim>;
+            string userId = claims[1].Value;
+            IEnumerable<Account> accounts = _accountRepository.GetFollowedAccounts(userId);
+            return new JsonResult(accounts);
         }
 
+        [HttpGet]
+        [Route("GetRecommends")]
+        public IActionResult GetRecommends()
+        {
+            IEnumerable<Account> accounts = _accountRepository.GetAccountRecommends();
+            return new JsonResult(accounts);
+        }
+        /*
         [HttpPost]
         public bool Post(FollowerLogic followerLogic)
         {
@@ -46,5 +67,6 @@ namespace AnstigramAPI.Controllers
 
             return true;
         }
+        */
     }
 }
