@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ITr1P8OIDKKx/IKJ+FAzh7tkJMP90KLG7Z2EPsV8870UHD1wFWTmPzVBbbbasxpL7205T2kkg02GfcNmxzpOvA==",
+  "dgSpecHash": "Ex8AVtwoB07OvEoG+mPqUavqGDlNF04/prce6jQKj0jr8trrMxRSZkeNCnrM/teEUPq7gd15Ta6ri1S1cLgfLQ==",
   "success": true,
   "projectFilePath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI\\AnstigramAPI.csproj",
   "expectedPackageFiles": [
@@ -109,7 +109,10 @@
     "C:\\Users\\paulj\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\paulj\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\paulj\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
+    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
