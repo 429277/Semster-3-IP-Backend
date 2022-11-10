@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KZx5PSPlreTO6z9qCixhk/vcy4Nb9Sh5I7HTgcZ0oL2vcARDFllTbcyhXXYswCpBgY2usCQYGTwewNkiIda3UQ==",
+  "dgSpecHash": "UTw7LjrkOoINFq7JG1UgUeExhgguQ2/LPGKYCibZ4li5yFqaiCnJO1x+298g/K+IF0BKiojubN9hgBCTSQI/4A==",
   "success": true,
-  "projectFilePath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\Anstigram.DAL\\AnstigramAPI.DAL.csproj",
+  "projectFilePath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\Anstigram.DAL\\AnstigramAPI.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\paulj\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

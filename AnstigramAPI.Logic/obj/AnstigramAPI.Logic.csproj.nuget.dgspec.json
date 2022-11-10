@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj": {}
+    "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj": {}
   },
   "projects": {
-    "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj": {
+    "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj",
+        "projectUniqueName": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj",
         "projectName": "AnstigramAPI.Logic",
-        "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj",
+        "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj",
         "packagesPath": "C:\\Users\\paulj\\.nuget\\packages\\",
-        "outputPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\obj\\",
+        "outputPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\paulj\\AppData\\Roaming\\NuGet\\NuGet.Config",

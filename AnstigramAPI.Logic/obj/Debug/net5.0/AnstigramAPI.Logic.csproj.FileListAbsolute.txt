@@ -10,3 +10,15 @@ D:\Git Semster 3\Individueel Insta\DotNET backend\AnstigramAPI\AnstigramAPI.Logi
 D:\Git Semster 3\Individueel Insta\DotNET backend\AnstigramAPI\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.dll
 D:\Git Semster 3\Individueel Insta\DotNET backend\AnstigramAPI\AnstigramAPI.Logic\obj\Debug\net5.0\ref\AnstigramAPI.Logic.dll
 D:\Git Semster 3\Individueel Insta\DotNET backend\AnstigramAPI\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.pdb
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\bin\Debug\net5.0\AnstigramAPI.Logic.deps.json
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\bin\Debug\net5.0\AnstigramAPI.Logic.dll
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\bin\Debug\net5.0\ref\AnstigramAPI.Logic.dll
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\bin\Debug\net5.0\AnstigramAPI.Logic.pdb
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.csproj.AssemblyReference.cache
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.AssemblyInfoInputs.cache
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.AssemblyInfo.cs
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.csproj.CoreCompileInputs.cache
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.dll
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\ref\AnstigramAPI.Logic.dll
+D:\Git Semster 3\Individueel Insta\DotNET backend\temp\AnstigramAPI.Logic\obj\Debug\net5.0\AnstigramAPI.Logic.pdb

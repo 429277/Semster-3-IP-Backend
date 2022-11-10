@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ko86GFdMQmatCb6OKSlQ5ckI0SSZUage35TGU6IxaxrDbd3ZqiCQBDts+mXTzeMf/606fNk42rFbc6UKYw9/Iw==",
+  "dgSpecHash": "0NsxmdSkXfo6mgQTmXUzdIreY2hQhCUaSRl31i4404q0hXmFIiqc7Ckrxn2A91MwySlQzFLuYT2+V9GBZJ7SsQ==",
   "success": true,
-  "projectFilePath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj",
+  "projectFilePath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

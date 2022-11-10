@@ -5843,11 +5843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI\\AnstigramAPI.csproj",
+      "projectUniqueName": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI\\AnstigramAPI.csproj",
       "projectName": "AnstigramAPI",
-      "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI\\AnstigramAPI.csproj",
+      "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI\\AnstigramAPI.csproj",
       "packagesPath": "C:\\Users\\paulj\\.nuget\\packages\\",
-      "outputPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI\\obj\\",
+      "outputPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\paulj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5864,11 +5864,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\Anstigram.DAL\\AnstigramAPI.DAL.csproj": {
-              "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\Anstigram.DAL\\AnstigramAPI.DAL.csproj"
+            "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\Anstigram.DAL\\AnstigramAPI.DAL.csproj": {
+              "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\Anstigram.DAL\\AnstigramAPI.DAL.csproj"
             },
-            "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj": {
-              "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj"
+            "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj": {
+              "projectPath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI.Logic\\AnstigramAPI.Logic.csproj"
             }
           }
         }
@@ -5914,24 +5914,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ex8AVtwoB07OvEoG+mPqUavqGDlNF04/prce6jQKj0jr8trrMxRSZkeNCnrM/teEUPq7gd15Ta6ri1S1cLgfLQ==",
+  "dgSpecHash": "qHagZaE9nHu0YLoGGNRk2xmtDgkh/ERFXQkOyNDKjo5D27s5kO8B3DUV2Kcq6Ec9kM49BpLWxo7bjXkSieU0vw==",
   "success": true,
-  "projectFilePath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\AnstigramAPI\\AnstigramAPI\\AnstigramAPI.csproj",
+  "projectFilePath": "D:\\Git Semster 3\\Individueel Insta\\DotNET backend\\GitHubAnstigramAPI\\AnstigramAPI\\AnstigramAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulj\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
     "C:\\Users\\paulj\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.17\\microsoft.aspnetcore.jsonpatch.5.0.17.nupkg.sha512",
@@ -108,11 +108,7 @@
     "C:\\Users\\paulj\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\paulj\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\paulj\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\paulj\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
-    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\paulj\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\paulj\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
