@@ -36,7 +36,7 @@ namespace Tests
             var repository = new AccountRepository(context);
             IEnumerable<Account> accounts = repository.GetAccountRecommends();
             
-            Assert.AreSame(accounts, context.Account);
+            Assert.AreSame(accounts, 1);
 
         }
     }
