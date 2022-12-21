@@ -1,11 +1,14 @@
-﻿using AnstigramAPI.Models;
+﻿using AnstigramAPI.Models.Post;
+using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
 namespace AnstigramAPI.Interfaces
 {
-    public interface IPostRepository : IGenericRepository<IPostRepository>
+    public interface IPostRepository
     {
-        public IEnumerable<Post> GetPostsOfAccount(int userId);
-        public IEnumerable<Post> GetFeedOfAccount(string userId);
+        public IEnumerable<ReadPost> GetPostsOfAccount(int userId);
+        public IEnumerable<ReadPost> GetFeedOfAccount(string userId);
+        public void Create(CreatePost post);
+        public IEnumerable<ReadPost> GetMyPosts(string authId);
     }
 }

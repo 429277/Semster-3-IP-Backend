@@ -15,6 +15,13 @@ namespace AnstigramAPI.Repositories
             _context = accountContext;
         }
 
+        public void FollowAccount(string authId, int followUserId)
+        {
+            int userId = _context.Account.Where(account => account.AuthId == authId).Select(account => account.Id).FirstOrDefault();
+            _context.Follower.Add(new FollowDTO(userId, followUserId));
+            _context.SaveChanges();
+        }
+
         public IEnumerable<Account> GetAccountRecommends()
         {
             return _context.Account;
@@ -34,6 +41,7 @@ namespace AnstigramAPI.Repositories
                         from fo in _context.Account
                         where fo.Id == fl.FollowerId
                         select fo;
+            //kijk naar methodes
 
             IEnumerable < Account > Accounts = query.ToList();
 

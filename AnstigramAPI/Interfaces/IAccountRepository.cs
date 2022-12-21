@@ -10,6 +10,7 @@ namespace AnstigramAPI.Interfaces
         public IEnumerable<Account> GetFollowingAccounts(string userId);
         public IEnumerable<Account> GetAccountRecommends();
         public IEnumerable<Account> SearchForAccounts(string searchterm);
+        public void FollowAccount(string authId, int followerUserId);
 
     }
 }

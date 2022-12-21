@@ -59,14 +59,18 @@ namespace AnstigramAPI.Controllers
             IEnumerable<Account> accounts = _accountRepository.GetAccountRecommends();
             return new JsonResult(accounts);
         }
-        /*
-        [HttpPost]
-        public bool Post(FollowerLogic followerLogic)
-        {
-            _userContainer.FollowUser(followerLogic.FollowerId, followerLogic.FollowingId);
 
+        [HttpPost]
+        [Route("Follow")]
+        public bool Follow([FromHeader] string Authorization, int followUserId)
+        {
+            var token = Authorization;
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(token);
+            List<Claim> claims = jwtSecurityToken.Claims as List<Claim>;
+            string userId = claims[1].Value;
+            _accountRepository.FollowAccount(userId, followUserId);
             return true;
         }
-        */
     }
 }
