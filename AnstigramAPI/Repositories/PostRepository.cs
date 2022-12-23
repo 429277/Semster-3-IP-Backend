@@ -26,7 +26,7 @@ namespace AnstigramAPI.Repositories
             _context.SaveChanges();
         }
 
-        IEnumerable<ReadPost> IPostRepository.GetFeedOfAccount(string userId)
+        public IEnumerable<ReadPost> GetFeedOfAccount(string userId)
         {
             IEnumerable<PostDTO> query = _context.Post;
             IEnumerable<Account> query2 = _context.Account;

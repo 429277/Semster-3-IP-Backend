@@ -15,7 +15,12 @@
       "ProjectGuid": "7936af29-b5a1-4435-a5f8-29322e39dbb8",
       "DisplayName": "AnstigramAPI.Logic",
       "ColorIndex": 2
+    },
+    "2ba2824f-8d8a-4af7-ae9b-31265f1f7b09": {
+      "ProjectGuid": "2ba2824f-8d8a-4af7-ae9b-31265f1f7b09",
+      "DisplayName": "Tests",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

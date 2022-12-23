@@ -1,0 +1,10 @@
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\b\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.deps.json
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\b\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.dll
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\b\AnstigramAPI.DAL\Debug\net5.0\ref\AnstigramAPI.DAL.dll
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\i\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.csproj.AssemblyReference.cache
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\i\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\i\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.AssemblyInfoInputs.cache
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\i\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.AssemblyInfo.cs
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\i\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.csproj.CopyComplete
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\i\AnstigramAPI.DAL\Debug\net5.0\AnstigramAPI.DAL.dll
+D:\Git Semster 3\Individueel Insta\DotNET backend\GitHubAnstigramAPI\.vs\AnstigramAPI\v17\lut\0\i\AnstigramAPI.DAL\Debug\net5.0\ref\AnstigramAPI.DAL.dll
