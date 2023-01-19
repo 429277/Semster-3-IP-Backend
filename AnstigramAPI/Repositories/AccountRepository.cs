@@ -21,6 +21,12 @@ namespace AnstigramAPI.Repositories
             _context.Follower.Add(new FollowDTO(userId, followUserId));
             _context.SaveChanges();
         }
+        public void UnFollowAccount(string authId, int followUserId)
+        {
+            int userId = _context.Account.Where(account => account.AuthId == authId).Select(account => account.Id).First();
+            _context.Follower.Remove(_context.Follower.Where(f => f.UserId == userId && f.FollowerId == followUserId).First());
+            _context.SaveChanges();
+        }
 
         public IEnumerable<Account> GetAccountRecommends()
         {

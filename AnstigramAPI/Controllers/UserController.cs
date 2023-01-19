@@ -66,5 +66,18 @@ namespace AnstigramAPI.Controllers
             _accountRepository.FollowAccount(authId, followUserId);
             return true;
         }
+
+        [HttpPost]
+        [Route("UnFollow")]
+        public bool UnFollow([FromHeader] string Authorization, [FromForm] int followUserId)
+        {
+            var token = Authorization;
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(token);
+            List<Claim> claims = jwtSecurityToken.Claims as List<Claim>;
+            string authId = claims[1].Value;
+            _accountRepository.UnFollowAccount(authId, followUserId);
+            return true;
+        }
     }
 }

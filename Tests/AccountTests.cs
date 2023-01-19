@@ -70,6 +70,40 @@ namespace Tests
         }
 
         [TestMethod]
+        public void TestUnFollowAccount()
+        {
+            //arrange
+            var optionsBuilder = new DbContextOptionsBuilder<AccountContext>()
+                .UseInMemoryDatabase(Guid.NewGuid().ToString());
+            var context = new AccountContext(optionsBuilder.Options);
+
+            Account a1 = new Account
+            {
+                Id = 1,
+                AuthId = "AuthId1",
+                Name = "Henk"
+            };
+            Account a2 = new Account
+            {
+                Id = 8,
+                AuthId = "AuthId8",
+                Name = "Harry"
+            };
+            FollowDTO follow = new FollowDTO(a2.Id, a1.Id);
+            context.Follower.Add(follow);
+            context.Account.Add(a1);
+            context.Account.Add(a2);
+            context.SaveChanges();
+
+            var repository = new AccountRepository(context);
+            //act
+            repository.UnFollowAccount(a1.AuthId, a2.Id);
+
+            //assert
+            Assert.AreEqual(context.Follower.Count(), 0);
+        }
+
+        [TestMethod]
         public void TestGetFollowedAccounts()
         {
             //arrange

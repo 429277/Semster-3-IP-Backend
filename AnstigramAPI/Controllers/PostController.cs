@@ -29,6 +29,7 @@ namespace AnstigramAPI.Controllers
             var jwtSecurityToken = handler.ReadJwtToken(token);
             List<Claim> claims = jwtSecurityToken.Claims as List<Claim>;
             string authId = claims[1].Value;
+
             CreatePost post = new CreatePost(caption, authId,image);
             _postRepository.Create(post);
             return new JsonResult(null);
