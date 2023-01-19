@@ -12,8 +12,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
-using AnstigramAPI.Logic.Interfaces;
-using AnstigramAPI.DAL;
 using AnstigramAPI.Interfaces;
 using AnstigramAPI.Repositories;
 using AnstigramAPI.DatabaseContext;
@@ -47,10 +45,6 @@ namespace AnstigramAPI
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
 
-            //Old layers dependicy injection
-            services.AddScoped<IUserDAL, UserDAL>();
-            services.AddScoped<IPostDAL, PostDAL>();
-            services.AddScoped<ICommentDAL, CommentDAL>();
             //Allow request from different domains.
             services.AddCors(c => {
                 c.AddDefaultPolicy(builder => builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader());

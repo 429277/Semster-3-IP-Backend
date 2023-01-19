@@ -29,18 +29,10 @@ namespace AnstigramAPI.Controllers
             var jwtSecurityToken = handler.ReadJwtToken(token);
             List<Claim> claims = jwtSecurityToken.Claims as List<Claim>;
             string authId = claims[1].Value;
-            //string authId = "auth0|634800719ae95d74a374b4c0";
             CreatePost post = new CreatePost(caption, authId,image);
             _postRepository.Create(post);
             return new JsonResult(null);
         }
-
-        //[HttpGet]
-        //public JsonResult Get()
-        //{
-        //    List<Post> posts = _postRepository.GetPosts();
-        //    return new JsonResult(posts);
-        //}
 
         [HttpGet]
         [Route("GetFeed")]
@@ -68,6 +60,20 @@ namespace AnstigramAPI.Controllers
             string authId = "auth0|634800719ae95d74a374b4c0";
             List<ReadPost> posts = (List<ReadPost>)_postRepository.GetMyPosts(authId);
             return new JsonResult(posts);
+        }
+
+        [HttpGet]
+        [Route("DeletePost")]
+        public void DeletePost([FromHeader] string Authorization, [FromForm] int postId)
+        {
+            _postRepository.DeletePost(postId);
+        }
+
+        [HttpGet]
+        [Route("UpdatePost")]
+        public void UpdatePost([FromHeader] string Authorization, [FromForm] int postId, [FromForm] string caption)
+        {
+            _postRepository.UpdatePost(new UpdatePost(caption, postId));
         }
     }
 }

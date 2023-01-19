@@ -13,7 +13,11 @@ namespace AnstigramAPI.Models.Post
         public string Caption { get; set; }
         public string AuthId { get; set; }
         public byte[] Image { get; set; }
-        
+
+        public CreatePost()
+        { 
+        }
+
         public CreatePost(string caption, string authId, IFormFile image)
         {
             Caption = caption;

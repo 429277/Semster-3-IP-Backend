@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using System.Data;
-using AnstigramAPI.Logic;
-using AnstigramAPI.Logic.Interfaces;
-using AnstigramAPI.Logic.Models;
 using System.Collections.Generic;
 using AnstigramAPI.Interfaces;
 using AnstigramAPI.Models;
@@ -20,28 +16,26 @@ namespace AnstigramAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly UserContainer _userContainer;
         private readonly IAccountRepository _accountRepository;
 
-        public UserController(IConfiguration configuration, IUserDAL userDAL, IAccountRepository accountRepository)
+        public UserController(IConfiguration configuration, IAccountRepository accountRepository)
         {
             _configuration = configuration;
-            _userContainer = new UserContainer(userDAL);
             _accountRepository = accountRepository;
             
         }
         
         [HttpGet("{id}")]
-        public JsonResult Get(int id)
+        public JsonResult Get(string id)
         {
-            User user = _userContainer.GetUser(id);
+            Account user = _accountRepository.GetUser(id);
 
             return new JsonResult(user);
         }
 
         [HttpGet]
         [Route("GetFollowers")]
-        public IActionResult Get([FromHeader] string Authorization)
+        public IActionResult GetFollowers([FromHeader] string Authorization)
         {
             var token = Authorization;
             var handler = new JwtSecurityTokenHandler();
@@ -62,14 +56,14 @@ namespace AnstigramAPI.Controllers
 
         [HttpPost]
         [Route("Follow")]
-        public bool Follow([FromHeader] string Authorization, int followUserId)
+        public bool Follow([FromHeader] string Authorization, [FromForm] int followUserId)
         {
             var token = Authorization;
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
             List<Claim> claims = jwtSecurityToken.Claims as List<Claim>;
-            string userId = claims[1].Value;
-            _accountRepository.FollowAccount(userId, followUserId);
+            string authId = claims[1].Value;
+            _accountRepository.FollowAccount(authId, followUserId);
             return true;
         }
     }

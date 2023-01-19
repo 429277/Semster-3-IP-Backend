@@ -5,11 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnstigramAPI", "AnstigramAPI\AnstigramAPI.csproj", "{230CA7A4-EE74-44F8-A427-38865EB854D4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnstigramAPI.DAL", "Anstigram.DAL\AnstigramAPI.DAL.csproj", "{28C1DDFF-065E-4A4A-B8DD-FA2CF858D022}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnstigramAPI.Logic", "AnstigramAPI.Logic\AnstigramAPI.Logic.csproj", "{7936AF29-B5A1-4435-A5F8-29322E39DBB8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{2BA2824F-8D8A-4AF7-AE9B-31265F1F7B09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{2BA2824F-8D8A-4AF7-AE9B-31265F1F7B09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +17,6 @@ Global
 		{230CA7A4-EE74-44F8-A427-38865EB854D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{230CA7A4-EE74-44F8-A427-38865EB854D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{230CA7A4-EE74-44F8-A427-38865EB854D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28C1DDFF-065E-4A4A-B8DD-FA2CF858D022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28C1DDFF-065E-4A4A-B8DD-FA2CF858D022}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28C1DDFF-065E-4A4A-B8DD-FA2CF858D022}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28C1DDFF-065E-4A4A-B8DD-FA2CF858D022}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7936AF29-B5A1-4435-A5F8-29322E39DBB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7936AF29-B5A1-4435-A5F8-29322E39DBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7936AF29-B5A1-4435-A5F8-29322E39DBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7936AF29-B5A1-4435-A5F8-29322E39DBB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2BA2824F-8D8A-4AF7-AE9B-31265F1F7B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2BA2824F-8D8A-4AF7-AE9B-31265F1F7B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BA2824F-8D8A-4AF7-AE9B-31265F1F7B09}.Release|Any CPU.ActiveCfg = Release|Any CPU

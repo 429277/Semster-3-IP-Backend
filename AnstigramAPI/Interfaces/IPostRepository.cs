@@ -10,5 +10,7 @@ namespace AnstigramAPI.Interfaces
         public IEnumerable<ReadPost> GetFeedOfAccount(string userId);
         public void Create(CreatePost post);
         public IEnumerable<ReadPost> GetMyPosts(string authId);
+        public void DeletePost(int postId);
+        public void UpdatePost(UpdatePost updatedPost);
     }
 }

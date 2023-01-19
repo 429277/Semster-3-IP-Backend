@@ -26,36 +26,47 @@ namespace AnstigramAPI.Repositories
             _context.SaveChanges();
         }
 
-        public IEnumerable<ReadPost> GetFeedOfAccount(string userId)
+        public IEnumerable<ReadPost> GetFeedOfAccount(string authId)
         {
-            IEnumerable<PostDTO> query = _context.Post;
-            IEnumerable<Account> query2 = _context.Account;
-            //where Ac.AuthId == userId
-            //from fl in _context.FollowerLogic
-            //where fl.UserId == Ac.Id
-            //from fo in _context.Account
-            //where fo.Id == fl.FollowerId
-            //select fo;
+            //var q = from Ac in _context.Account 
+            //        where Ac.AuthId == authId
+            //        from fl in _context.Follower
+            //        where fl.FollowerId == Ac.Id
+            //        from po in _context.Post
+            //        where po.UserId == fl.UserId
+            //        from pun in _context.Account
+            //        where pun.Id == po.UserId
+            //        select new
+            //        {
+            //            post = po,
+            //            username = pun.Name
+            //        };
 
-            //IEnumerable<Account> Accounts = query.ToList();
-            IEnumerable<ReadPost> h = _context.Post
-                .Join(_context.Account,
-                p => p.UserId,
-                a => a.Id,
-                (p, a) => new ReadPost(p, a.Name)
-                ).ToList();
+            //List<ReadPost> posts = new List<ReadPost>();
+            List<ReadPost> posts = new List<ReadPost>();
 
-            //List<ReadPost> niks = new();
-            //foreach (PostDTO postDTO in query)
-            //{
-            //    string username = query2.Where(account => account.AuthId == postDTO.AuthId).Select(account => account.Name).FirstOrDefault();
+            try
+            {
+                int userId = _context.Account.Where(a => a.AuthId == authId).First().Id;
+                List<FollowDTO> follewedAccounts = _context.Follower.Where(f => f.FollowerId == userId).ToList();
+                foreach (FollowDTO follow in follewedAccounts)
+                {
 
-            //    ReadPost post = new ReadPost(postDTO, "frank");
-            //    niks.Add(post);
-            //}
-            //h = niks;
+                    List<ReadPost> postsOfUser = _context.Post.Where(p => p.UserId == follow.UserId)
+                    .Join(_context.Account,
+                    p => p.UserId,
+                    a => a.Id,
+                    (p, a) => new ReadPost(p, a.Name)).ToList();
+                    foreach (ReadPost post in postsOfUser)
+                    {
+                        posts.Add(post);
+                    }
+                }
+            }
+            catch { posts.Clear(); }
 
-            return h;
+
+            return posts;
         }
 
         IEnumerable<ReadPost> IPostRepository.GetPostsOfAccount(int userId)
@@ -68,13 +79,25 @@ namespace AnstigramAPI.Repositories
             IEnumerable<PostDTO> query = _context.Post;
             IEnumerable<Account> query2 = _context.Account;
 
-            IEnumerable<ReadPost> h = _context.Post
+            IEnumerable<ReadPost> posts = _context.Post
                    .Join(_context.Account.Where(account => account.AuthId == authId),
                     p => p.UserId,
                     a => a.Id,
                     (p, a) => new ReadPost(p, a.Name)
                     ).ToList();
-            return h;
+            return posts;
+        }
+
+        public void DeletePost(int postId)
+        {
+            _context.Post.Remove(_context.Post.Where(p => p.Id == postId).FirstOrDefault());
+            _context.SaveChanges();
+        }
+
+        public void UpdatePost(UpdatePost updatedPost)
+        {
+            _context.Post.Where(p => p.Id == updatedPost.Id).FirstOrDefault().Caption = updatedPost.Caption;
+            _context.SaveChanges();
         }
     }
 }

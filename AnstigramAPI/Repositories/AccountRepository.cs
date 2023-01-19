@@ -17,7 +17,7 @@ namespace AnstigramAPI.Repositories
 
         public void FollowAccount(string authId, int followUserId)
         {
-            int userId = _context.Account.Where(account => account.AuthId == authId).Select(account => account.Id).FirstOrDefault();
+            int userId = _context.Account.Where(account => account.AuthId == authId).Select(account => account.Id).First();
             _context.Follower.Add(new FollowDTO(userId, followUserId));
             _context.SaveChanges();
         }
@@ -32,20 +32,26 @@ namespace AnstigramAPI.Repositories
             throw new System.NotImplementedException();
         }
 
-        IEnumerable<Account> IAccountRepository.GetFollowedAccounts(string userId)
+        public IEnumerable<Account> GetFollowedAccounts(string authId)
         {
-            var query = from Ac in _context.Account
-                        where Ac.AuthId == userId
-                        from fl in _context.FollowerLogic
-                        where fl.UserId == Ac.Id
-                        from fo in _context.Account
-                        where fo.Id == fl.FollowerId
-                        select fo;
-            //kijk naar methodes
-
-            IEnumerable < Account > Accounts = query.ToList();
-
-            return Accounts;
+            //var query = from Ac in _context.Account
+            //            where Ac.AuthId == authId
+            //            from fl in _context.Follower
+            //            where fl.UserId == Ac.Id
+            //            from fo in _context.Account
+            //            where fo.Id == fl.FollowerId
+            //            select fo;
+            //IEnumerable<Account> Accounts = query.ToList();
+            
+            int userId = _context.Account.Where(a => a.AuthId == authId).First().Id;
+            List<FollowDTO> follewedAccounts = _context.Follower.Where(f => f.FollowerId == userId).ToList();
+            List<Account> accounts = new List<Account>();
+            foreach (FollowDTO follow in follewedAccounts) 
+            {
+                accounts.Add(_context.Account.Where(a => a.Id == follow.UserId).First());
+            }
+            
+            return accounts;
         }
 
         IEnumerable<Account> IAccountRepository.GetFollowingAccounts(string userId)
